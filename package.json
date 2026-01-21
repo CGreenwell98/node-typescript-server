@@ -4,12 +4,17 @@
   "description": "Personal Test Server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "serve": "nodemon dist/app.js",
+    "dev": "concurrently -k \"npm:watch\" \"npm:serve\""
   },
   "author": "chris",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^25.0.9",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
     "typescript": "^5.9.3"
   }
 }

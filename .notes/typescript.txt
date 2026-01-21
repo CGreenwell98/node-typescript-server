@@ -4,3 +4,38 @@ npm install -D @types/node
 
 2. Setup config file
 npx tsc --init
+
+3. Auto compile and Run
+
+More “traditional”, mirrors production closer.
+
+Install:
+
+npm i -D nodemon
+
+
+Add scripts:
+
+{
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "serve": "nodemon dist/server.js",
+    "dev": "concurrently -k \"npm:watch\" \"npm:serve\""
+  }
+}
+
+
+Install concurrently:
+
+npm i -D concurrently
+
+
+Run:
+
+npm run dev
+
+
+tsc -w recompiles into dist/
+
+nodemon restarts Node when dist/ changes
