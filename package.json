@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal Test Server",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",

@@ -9,11 +9,10 @@
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
     "target": "esnext",
-    "types": [],
     // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "lib": ["esnext"],
+    "types": ["node"],
+    // and ensure @types/node is installed as a devDependency
 
     // Other Outputs
     "sourceMap": true,
@@ -35,7 +34,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
