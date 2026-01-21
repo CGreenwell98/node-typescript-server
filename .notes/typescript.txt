@@ -1,0 +1,6 @@
+1. install typescript as dev dependency
+npm i typescript -D
+npm install -D @types/node
+
+2. Setup config file
+npx tsc --init
