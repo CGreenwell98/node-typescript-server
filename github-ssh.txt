@@ -1,0 +1,32 @@
+1. Generate an SSH key (Ed25519)
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+2. Add key to SSH agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+3. Add the public key to GitHub
+pbcopy < ~/.ssh/id_ed25519.pub
+
+THEN in Github: Settings → SSH and GPG keys → New SSH key
+
+4. TEST KEY
+ssh -T git@github.com
+
+
+5.
+
+Add the GitHub repo as an SSH remote
+
+On GitHub, create a repo (empty is fine). Copy the SSH URL, which looks like:
+
+git@github.com:CGreenwell98/node-typescript-server.git
+
+Then set your remote:
+
+git remote add origin git@github.com:CGreenwell98/node-typescript-server.git
+git branch -M main
+git push -u origin main
+
+
+From then on, git push will use SSH.
