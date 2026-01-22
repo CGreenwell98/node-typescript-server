@@ -13,6 +13,9 @@
     "lib": ["esnext"],
     "types": ["node"],
     // and ensure @types/node is installed as a devDependency
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // "moduleResolution": "node",
 
     // Other Outputs
     "sourceMap": true,
